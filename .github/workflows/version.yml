@@ -1,8 +1,6 @@
 name: Generate VERSION.md
 on:
   push:
-    branches:
-      - master
 jobs:
   test:
     name: Generate VERSION.md
