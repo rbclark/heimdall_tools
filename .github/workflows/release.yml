@@ -10,7 +10,8 @@ jobs:
       - name: Setup ruby
         uses: actions/setup-ruby@v1
       - name: Checkout heimdall_tools
-        uses: actions/checkout@v1
+        uses: actions/checkout@v2
+        run: git fetch --depth=1 origin +refs/tags/*:refs/tags/*
         with:
           token: ${{secrets.GITHUB_TOKEN}}
       - name: Publish to RubyGems
