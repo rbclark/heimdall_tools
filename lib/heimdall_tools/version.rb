@@ -1,4 +1,5 @@
-module HeimdallTools
-  VERSION = '1.3.19'.freeze
-end
+require 'git-version-bump'
 
+module HeimdallTools
+  VERSION = GVB.version
+end
