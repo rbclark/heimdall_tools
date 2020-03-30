@@ -20,6 +20,7 @@ jobs:
 
     steps:
       - uses: actions/checkout@v2
+      - run: git fetch --prune --unshallow
       - name: Test on Ruby ${{ matrix.ruby }}
         uses: actions/setup-ruby@v1
         with:
