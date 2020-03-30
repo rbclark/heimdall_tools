@@ -4,7 +4,11 @@
 
 lib = File.expand_path('lib', __dir__)
 $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
-require 'heimdall_tools/version'
+begin
+  require 'heimdall_tools/version'
+rescue LoadError
+  nil
+end
 
 Gem::Specification.new do |spec| # rubocop:disable Metrics/BlockLength
   spec.name          = 'heimdall_tools'
@@ -37,7 +41,7 @@ Gem::Specification.new do |spec| # rubocop:disable Metrics/BlockLength
   spec.add_runtime_dependency 'httparty', '~> 0.18.0'
   spec.add_runtime_dependency 'openssl', '~> 2.1'
   spec.add_runtime_dependency 'nori', '~> 2.6'
-  spec.add_development_dependency 'git-version-bump', '~> 0.15'
+  spec.add_runtime_dependency 'git-version-bump', '~> 0.15'
   spec.add_development_dependency 'bundler'
   spec.add_development_dependency 'minitest', '~> 5.0'
   spec.add_development_dependency 'pry'
