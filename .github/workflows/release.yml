@@ -33,7 +33,7 @@ jobs:
           gem install github_changelog_generator
       - name: Run github_changelog_generator
         run:
-          github_changelog_generator -u rbclark -p heimdall_tools
+          github_changelog_generator -u mitre -p heimdall_tools
       - name: Commit and push changes to CHANGELOG.md
         uses: github-actions-x/commit@v2.1
         with:
