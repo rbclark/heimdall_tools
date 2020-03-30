@@ -1,8 +1,8 @@
 # Changelog
 
-## [Unreleased](https://github.com/mitre/heimdall_tools/tree/HEAD)
+## [v1.3.20](https://github.com/mitre/heimdall_tools/tree/v1.3.20) (2020-03-30)
 
-[Full Changelog](https://github.com/mitre/heimdall_tools/compare/v1.3.19...HEAD)
+[Full Changelog](https://github.com/mitre/heimdall_tools/compare/v1.3.19...v1.3.20)
 
 **Fixed bugs:**
 
@@ -76,10 +76,6 @@
 
 - \[BUG\] | sonarqube\_mapper is not handling NIST mapping correctly [\#21](https://github.com/mitre/heimdall_tools/issues/21)
 
-**Merged pull requests:**
-
-- Fixes \#21 \[BUG\] | sonarqube\_mapper is not handling NIST mapping correctly [\#22](https://github.com/mitre/heimdall_tools/pull/22) ([rx294](https://github.com/rx294))
-
 ## [v1.3.7](https://github.com/mitre/heimdall_tools/tree/v1.3.7) (2020-03-06)
 
 [Full Changelog](https://github.com/mitre/heimdall_tools/compare/v1.3.6...v1.3.7)
@@ -106,6 +102,7 @@
 
 **Merged pull requests:**
 
+- Fixes \#21 \[BUG\] | sonarqube\_mapper is not handling NIST mapping correctly [\#22](https://github.com/mitre/heimdall_tools/pull/22) ([rx294](https://github.com/rx294))
 - Sonarqube authentication option [\#20](https://github.com/mitre/heimdall_tools/pull/20) ([rx294](https://github.com/rx294))
 
 ## [v1.3.2](https://github.com/mitre/heimdall_tools/tree/v1.3.2) (2019-12-27)

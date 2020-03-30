@@ -1,16 +1,41 @@
-name: Release Management
-
+name: Publish and release changelog
 on:
   push:
-    # branches to consider in the event; optional, defaults to all
     branches:
       - master
-
 jobs:
-  update_draft_release:
+  test:
+    name: Generate CHANGELOG.md
     runs-on: ubuntu-latest
     steps:
-      # Drafts your next Release notes as Pull Requests are merged into "master"
-      - uses: toolmantim/release-drafter@v5.2.0
+      - name: Setup ruby
+        uses: actions/setup-ruby@v1
+      - name: Checkout heimdall_tools
+        uses: actions/checkout@v1
+        with:
+          token: ${{secrets.GITHUB_TOKEN}}
+      - name: Install github_changelog_generator
+        run: |
+          gem install github_changelog_generator
+      - name: Run github_changelog_generator
+        run:
+          github_changelog_generator -u rbclark -p heimdall_tools
+      - name: Commit and push changes to CHANGELOG.md
+        uses: github-actions-x/commit@v2.1
+        with:
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+          push-branch: 'master'
+          commit-message: 'Publish changelog'
+          force-add: 'true'
         env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          CI: true
+      - name: Publish to RubyGems
+        run: |
+          mkdir -p $HOME/.gem
+          touch $HOME/.gem/credentials
+          chmod 0600 $HOME/.gem/credentials
+          printf -- "---\n:rubygems_api_key: ${GEM_HOST_API_KEY}\n" > $HOME/.gem/credentials
+          gem build *.gemspec
+          gem push *.gem
+        env:
+          GEM_HOST_API_KEY: ${{secrets.RUBYGEMS_AUTH_TOKEN}}
