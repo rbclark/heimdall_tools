@@ -21,6 +21,7 @@ jobs:
           chmod 0600 $HOME/.gem/credentials
           printf -- "---\n:rubygems_api_key: ${with}\n" > $HOME/.gem/credentials
           bundle install
+          bundle install
           gem build *.gemspec
           gem push *.gem
         env:
