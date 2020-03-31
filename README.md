@@ -1,8 +1,8 @@
 # Heimdall Tools
 
-![Overall Status](https://github.com/mitre/heimdall_tools/workflows/heimdall_tools/badge.svg)  
+![Overall Status](https://github.com/mitre/heimdall_tools/workflows/heimdall_tools/badge.svg)
 
-![Heimdall Tools Build](https://github.com/mitre/heimdall_tools/workflows/Build%20and%20run%20heimdall_tools/badge.svg)
+![Heimdall Tools Build](https://github.com/mitre/heimdall_tools/workflows/Build%20and%20release%20gem/badge.svg)
 
 HeimdallTools supplies several methods to convert output from various tools to "Heimdall Data Format"(HDF) format to be viewable in Heimdall. The converters in version 1.1.1 are from:
 
@@ -49,7 +49,7 @@ FLAGS:
     -o --output <scan-results>       : path to output scan-results json.
     -V --verbose                     : verbose run [optional].
 
-example: 
+example:
 
 heimdall_tools sonarqube_mapper -n sonar_project_key -u http://sonar:9000/api -o scan_results.json
 
@@ -87,7 +87,7 @@ FLAGS:
 example: heimdall_tools zap_mapper -j zap_results.json -n site_name -o scan_results.json
 ```
 
-## version  
+## version
 
 Prints out the gem version
 
@@ -97,9 +97,9 @@ USAGE: heimdall_tools version
 
 # Development
 
-## Submitting a PR  
+## Submitting a PR
 
-### A complete PR should include 7 core elements:  
+### A complete PR should include 7 core elements:
 
 - A signed PR ( aka `git commit -a -s` )
 - Code for the new functionality
@@ -110,7 +110,7 @@ USAGE: heimdall_tools version
   - Scripts / Scaffolding code for the Example / Template files ( `generate_map` is an example )
 - Example Output of the new functionality if it produces an artifact
 
-### Overview of our PR process 
+### Overview of our PR process
 
 1. open an issue on the main inspec_tools website noting the issues your PR will address
 2. fork the repo
@@ -147,19 +147,19 @@ To release a new version, update the version number in `version.rb` according to
 - Author:: Rony Xavier [rx294](https://github.com/rx294)
 - Author:: Dan Mirsky [mirskiy](https://github.com/mirskiy)
 
-### NOTICE   
+### NOTICE
 
-© 2018 The MITRE Corporation.  
+© 2018 The MITRE Corporation.
 
-Approved for Public Release; Distribution Unlimited. Case Number 18-3678.  
+Approved for Public Release; Distribution Unlimited. Case Number 18-3678.
 
 ### NOTICE
 MITRE hereby grants express written permission to use, reproduce, distribute, modify, and otherwise leverage this software to the extent permitted by the licensed terms provided in the LICENSE.md file included with this project.
 
-### NOTICE  
+### NOTICE
 
-This software was produced for the U. S. Government under Contract Number HHSM-500-2012-00008I, and is subject to Federal Acquisition Regulation Clause 52.227-14, Rights in Data-General.  
+This software was produced for the U. S. Government under Contract Number HHSM-500-2012-00008I, and is subject to Federal Acquisition Regulation Clause 52.227-14, Rights in Data-General.
 
-No other use other than that granted to the U. S. Government, or to those acting on behalf of the U. S. Government under that Clause is authorized without the express written permission of The MITRE Corporation.   
+No other use other than that granted to the U. S. Government, or to those acting on behalf of the U. S. Government under that Clause is authorized without the express written permission of The MITRE Corporation.
 
-For further information, please contact The MITRE Corporation, Contracts Management Office, 7515 Colshire Drive, McLean, VA  22102-7539, (703) 983-6000.  
+For further information, please contact The MITRE Corporation, Contracts Management Office, 7515 Colshire Drive, McLean, VA  22102-7539, (703) 983-6000.

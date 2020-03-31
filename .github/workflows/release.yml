@@ -1,4 +1,4 @@
-name: Publish and release gem and changelog
+name: Build and release gem
 
 on:
   release:
@@ -6,7 +6,7 @@ on:
 
 jobs:
   release:
-    name: Push to Rubygems and publish changelog
+    name: Push to Rubygems
     runs-on: ubuntu-latest
     steps:
       - name: Setup ruby
