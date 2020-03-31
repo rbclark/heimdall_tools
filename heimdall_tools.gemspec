@@ -11,7 +11,7 @@ rescue LoadError
 end
 
 Gem::Specification.new do |spec| # rubocop:disable Metrics/BlockLength
-  spec.name          = 'heimdall_tools'
+  spec.name          = 'heimdall_tools_test'
   spec.version       = HeimdallTools::VERSION rescue "0.0.0.1.ENOGVB"
   spec.authors       = ['Robert Thew', 'Rony Xavier', 'Aaron Lippold']
   spec.email         = ['rxavier@mitre.org']
