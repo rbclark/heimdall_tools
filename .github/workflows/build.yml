@@ -32,6 +32,6 @@ jobs:
           # Install gems required for building
           gem install bundler git-lite-version-bump
           gem build heimdall_tools.gemspec
-          gem install heimdall_tools-*.gem
+          gem install heimdall_tools*.gem
           heimdall_tools help
           heimdall_tools version

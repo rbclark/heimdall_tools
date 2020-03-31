@@ -2,15 +2,11 @@
 
 ## [Unreleased](https://github.com/rbclark/heimdall_tools/tree/HEAD)
 
-[Full Changelog](https://github.com/rbclark/heimdall_tools/compare/0.16.0.2...HEAD)
+[Full Changelog](https://github.com/rbclark/heimdall_tools/compare/v1.4.3...HEAD)
 
 **Merged pull requests:**
 
 - PR Test [\#2](https://github.com/rbclark/heimdall_tools/pull/2) ([rbclark](https://github.com/rbclark))
-
-## [0.16.0.2](https://github.com/rbclark/heimdall_tools/tree/0.16.0.2) (2020-03-31)
-
-[Full Changelog](https://github.com/rbclark/heimdall_tools/compare/v1.4.3...0.16.0.2)
 
 ## [v1.4.3](https://github.com/rbclark/heimdall_tools/tree/v1.4.3) (2020-03-30)
 
