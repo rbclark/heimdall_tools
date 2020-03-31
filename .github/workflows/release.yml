@@ -1,7 +1,9 @@
 name: Publish and release gem and changelog
+
 on:
   release:
     types: [published]
+
 jobs:
   release:
     name: Push to Rubygems and publish changelog
