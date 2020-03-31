@@ -5,8 +5,8 @@ on:
     # branches to consider in the event; optional, defaults to all
     branches:
       - master
-    release:
-      types: [published]
+  release:
+    types: [published]
 
 jobs:
   update_changelog:
