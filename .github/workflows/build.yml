@@ -33,7 +33,7 @@ jobs:
         run: |
           gem install bundler
           bundle install
-          bundle exec gem build heimdall_tools.gemspec
+          gem build heimdall_tools.gemspec
           gem install heimdall_tools-*.gem
           heimdall_tools help
           heimdall_tools version
