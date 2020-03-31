@@ -1,4 +1,4 @@
-name: Release Management
+name: Draft Release
 
 on:
   push:
@@ -7,7 +7,7 @@ on:
       - master
 
 jobs:
-  update_draft_release:
+  update_changelog_draft_release:
     runs-on: ubuntu-latest
     steps:
       # Drafts your next Release notes as Pull Requests are merged into "master"

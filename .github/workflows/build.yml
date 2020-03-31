@@ -16,8 +16,6 @@ jobs:
         exclude:
           - platform: windows-latest
             ruby: 2.7
-          - platform: windows-latest
-            ruby: 2.4
     runs-on: ${{ matrix.platform }}
 
     steps:

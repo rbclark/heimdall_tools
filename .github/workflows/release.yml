@@ -3,7 +3,7 @@ on:
   release:
     types: [published]
 jobs:
-  test:
+  release:
     name: Push to Rubygems and publish changelog
     runs-on: ubuntu-latest
     steps:
@@ -24,18 +24,3 @@ jobs:
           gem push *.gem
         env:
           GEM_HOST_API_KEY: ${{secrets.RUBYGEMS_AUTH_TOKEN}}
-      - name: Install github_changelog_generator
-        run: |
-          gem install github_changelog_generator
-      - name: Run github_changelog_generator
-        run:
-          github_changelog_generator -u mitre -p heimdall_tools
-      - name: Commit and push changes to CHANGELOG.md
-        uses: github-actions-x/commit@v2.1
-        with:
-          github-token: ${{ secrets.GITHUB_TOKEN }}
-          push-branch: 'master'
-          commit-message: 'Publish changelog'
-          force-add: 'true'
-        env:
-          CI: true
