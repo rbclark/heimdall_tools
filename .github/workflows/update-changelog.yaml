@@ -16,8 +16,6 @@ jobs:
       - name: Setup ruby
         uses: actions/setup-ruby@v1
       - uses: actions/checkout@v2
-        with:
-          ref: master
       - name: Install github_changelog_generator
         run: |
           gem install github_changelog_generator
@@ -26,12 +24,7 @@ jobs:
           export CHANGELOG_GITHUB_TOKEN=${{ secrets.GITHUB_TOKEN }}
           github_changelog_generator -u rbclark -p heimdall_tools
       - name: Commit and push changes to CHANGELOG.md
-        uses: github-actions-x/commit@v2.5
+        uses: stefanzweifel/git-auto-commit-action@v4.1.0
         with:
-          github-token: ${{ secrets.GITHUB_TOKEN }}
-          push-branch: 'master'
-          commit-message: 'Publish changelog'
-          files: CHANGELOG.md
-          force-add: 'true'
-        env:
-          CI: true
+          commit_message: 'Update CHANGELOG.md'
+          branch: 'master'
