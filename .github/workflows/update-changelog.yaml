@@ -31,7 +31,7 @@ jobs:
           github-token: ${{ secrets.GITHUB_TOKEN }}
           push-branch: 'master'
           commit-message: 'Publish changelog'
-
+          files: CHANGELOG.md
           force-add: 'true'
         env:
           CI: true
