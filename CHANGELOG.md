@@ -1,5 +1,13 @@
 # Changelog
 
+## [Unreleased](https://github.com/rbclark/heimdall_tools/tree/HEAD)
+
+[Full Changelog](https://github.com/rbclark/heimdall_tools/compare/v1.4.4...HEAD)
+
+**Merged pull requests:**
+
+- Bump prep-release version to v5 [\#3](https://github.com/rbclark/heimdall_tools/pull/3) ([rbclark](https://github.com/rbclark))
+
 ## [v1.4.4](https://github.com/rbclark/heimdall_tools/tree/v1.4.4) (2020-03-31)
 
 [Full Changelog](https://github.com/rbclark/heimdall_tools/compare/v1.4.3...v1.4.4)
