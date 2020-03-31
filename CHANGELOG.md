@@ -1,8 +1,8 @@
 # Changelog
 
-## [Unreleased](https://github.com/rbclark/heimdall_tools/tree/HEAD)
+## [v1.5.0](https://github.com/rbclark/heimdall_tools/tree/v1.5.0) (2020-03-31)
 
-[Full Changelog](https://github.com/rbclark/heimdall_tools/compare/v1.4.4...HEAD)
+[Full Changelog](https://github.com/rbclark/heimdall_tools/compare/v1.4.4...v1.5.0)
 
 **Merged pull requests:**
 
