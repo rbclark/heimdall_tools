@@ -16,11 +16,15 @@ jobs:
         exclude:
           - platform: windows-latest
             ruby: 2.7
+          - platform: windows-latest
+            ruby: 2.4
     runs-on: ${{ matrix.platform }}
 
     steps:
       - uses: actions/checkout@v2
-      - run: git fetch --prune --unshallow
+        with:
+          fetch-depth: 0
+      - run: git fetch origin +refs/tags/*:refs/tags/*
       - name: Test on Ruby ${{ matrix.ruby }}
         uses: actions/setup-ruby@v1
         with:
@@ -29,8 +33,7 @@ jobs:
         run: |
           gem install bundler
           bundle install
-          bundle install
-          gem build heimdall_tools.gemspec
+          bundle exec gem build heimdall_tools.gemspec
           gem install heimdall_tools-*.gem
           heimdall_tools help
           heimdall_tools version
