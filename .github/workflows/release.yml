@@ -9,18 +9,17 @@ jobs:
     steps:
       - name: Setup ruby
         uses: actions/setup-ruby@v1
-      - name: Checkout heimdall_tools
-        uses: actions/checkout@v2
+      - uses: actions/checkout@v2
         with:
-          token: ${{secrets.GITHUB_TOKEN}}
-      - run: git fetch --prune --unshallow
+          fetch-depth: 0
+      - run: git fetch origin +refs/tags/*:refs/tags/*
       - name: Publish to RubyGems
         run: |
           mkdir -p $HOME/.gem
           touch $HOME/.gem/credentials
           chmod 0600 $HOME/.gem/credentials
           printf -- "---\n:rubygems_api_key: ${with}\n" > $HOME/.gem/credentials
-          bundle install
+          gem install git-lite-version-bump
           gem build *.gemspec
           gem push *.gem
         env:
